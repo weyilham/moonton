@@ -46,6 +46,10 @@ Route::get('/subscription', function () {
     return Inertia::render('Prototype/subscription');
 })->name('subscription');
 
+Route::get('/movie/{slug}', function () {
+    return Inertia::render('Prototype/Movie/Show');
+})->name('movie.show');
+
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');

@@ -31,7 +31,7 @@ function FeaturMovie({ thumbnail, title, category, slug, rating = 0 }) {
             {/* bottom detail  */}
             <div
                 className="absolute bottom-0 h-[100px] left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px]
-        rounded-br-[28px] flex justify-between items-center px-7 h-[130px]"
+        rounded-br-[28px] flex justify-between items-center px-7"
             >
                 <div>
                     <div className="font-medium text-[22px] text-white">
@@ -45,7 +45,10 @@ function FeaturMovie({ thumbnail, title, category, slug, rating = 0 }) {
                     <img src="/icons/ic_play.svg" width="50" alt="" />
                 </div>
             </div>
-            <Link href={slug} className="inset-0 absolute z-50"></Link>
+            <Link
+                href={route("movie.show", slug)}
+                className="inset-0 absolute z-50"
+            ></Link>
         </div>
     );
 }

@@ -33,7 +33,10 @@ function BrowseMovie({ thumbnail, title, slug, category }) {
             >
                 <img src="/icons/ic_play.svg" width="50" alt="" />
             </div>
-            <Link href={slug} className="inset-0 absolute z-50"></Link>
+            <Link
+                href={route("movie.show", slug)}
+                className="inset-0 absolute z-50"
+            ></Link>
         </div>
     );
 }
