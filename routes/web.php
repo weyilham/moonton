@@ -42,6 +42,10 @@ Route::get('/dashboard', function () {
     return Inertia::render('Prototype/dashboard');
 })->name('dashboard');
 
+Route::get('/subscription', function () {
+    return Inertia::render('Prototype/subscription');
+})->name('subscription');
+
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
