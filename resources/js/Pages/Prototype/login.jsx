@@ -54,11 +54,13 @@ function login() {
                                 </div>
                             </div>
                             <div className="grid space-y-[14px] mt-[30px]">
-                                <Button type="button" variant="primary">
-                                    <span className="text-base font-semibold">
-                                        Start Watching
-                                    </span>
-                                </Button>
+                                <Link href={route("dashboard")}>
+                                    <Button type="button" variant="primary">
+                                        <span className="text-base font-semibold">
+                                            Start Watching
+                                        </span>
+                                    </Button>
+                                </Link>
 
                                 <Link href={route("prototype.register")}>
                                     <Button
