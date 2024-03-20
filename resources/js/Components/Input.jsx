@@ -11,7 +11,7 @@ Input.propTypes = {
     autoComplete: PropTypes.string,
     required: PropTypes.bool,
     isFocused: PropTypes.bool,
-    handleChange: PropTypes.func,
+    handleOnChange: PropTypes.func,
     placeholder: PropTypes.string,
     isError: PropTypes.bool,
 };
@@ -26,7 +26,7 @@ function Input({
     autoComplete,
     required,
     isFocused,
-    handleChange,
+    handleOnChange,
     placeholder,
     isError,
 }) {
@@ -49,7 +49,7 @@ function Input({
                 ref={input}
                 autoComplete={autoComplete}
                 required={required}
-                onChange={(e) => handleChange(e)}
+                onChange={(e) => handleOnChange(e)}
                 placeholder={placeholder}
             />
         </div>

@@ -38,9 +38,9 @@ Route::prefix('prototype')->name('prototype.')->group(function () {
     })->name('register');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/prototype/dashboard', function () {
     return Inertia::render('Prototype/dashboard');
-})->name('dashboard');
+})->name('prototype.dashboard');
 
 Route::get('/subscription', function () {
     return Inertia::render('Prototype/subscription');
@@ -50,9 +50,9 @@ Route::get('/movie/{slug}', function () {
     return Inertia::render('Prototype/Movie/Show');
 })->name('movie.show');
 
-// Route::get('/dashboard', function () {
-//     return Inertia::render('Dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

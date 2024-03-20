@@ -26,14 +26,14 @@ export default function dashboard() {
                     Featured Movies
                 </div>
                 <Flickity className="gap-[30px]" options={flickityOptions}>
-                    {[1, 2, 3, 4, 5].map((item) => (
+                    {[1, 2, 3, 4].map((item) => (
                         <FeaturMovie
                             key={item}
                             title="The Batman in Love"
                             category="Action . Comedy"
                             rating={5}
                             slug="the-batman-in-love"
-                            thumbnail="/images/featured-1.png"
+                            thumbnail={`/images/featured-${item}.png`}
                         />
                     ))}
                 </Flickity>
@@ -50,7 +50,7 @@ export default function dashboard() {
                             title="The Batman in Love"
                             category="Action . Comedy"
                             slug="the-batman-in-love"
-                            thumbnail="/images/featured-1.png"
+                            thumbnail={`/images/browse-${item}.png`}
                         />
                     ))}
                 </Flickity>
