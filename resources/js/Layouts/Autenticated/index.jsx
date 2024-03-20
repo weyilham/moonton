@@ -3,7 +3,7 @@ import React from "react";
 import Sidebar from "./sidebar";
 import Topbar from "./topbar";
 
-function Authenticated({ children }) {
+function Authenticated({ children, auth }) {
     return (
         <>
             <Head title="Dashboard" />
@@ -16,7 +16,7 @@ function Authenticated({ children }) {
                 <div className="ml-[300px] px-[50px]">
                     <div className="py-10 flex flex-col gap-[50px]">
                         {/* Start: Topbar */}
-                        <Topbar />
+                        <Topbar name={auth.user.name} />
                         {/* End: Topbar */}
 
                         <main>{children}</main>

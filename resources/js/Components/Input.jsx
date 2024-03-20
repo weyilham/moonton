@@ -14,6 +14,7 @@ Input.propTypes = {
     handleOnChange: PropTypes.func,
     placeholder: PropTypes.string,
     isError: PropTypes.bool,
+    id: PropTypes.string,
 };
 
 function Input({
@@ -29,6 +30,7 @@ function Input({
     handleOnChange,
     placeholder,
     isError,
+    id,
 }) {
     const input = useRef(null);
     useEffect(() => {
@@ -51,6 +53,7 @@ function Input({
                 required={required}
                 onChange={(e) => handleOnChange(e)}
                 placeholder={placeholder}
+                id={id}
             />
         </div>
     );
